@@ -59,8 +59,8 @@ export const ImgWrap = styled.div`
   max-width: 450px;
   height: auto;
   img {
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  
+
   }
 `;
 

@@ -17,7 +17,7 @@ import {
   PmpLogo,
   PmpLogoImg
 } from './ProblemElements';
-import problemSolarPanelImg from '../../assets/images/problem-solar-panel.jpg'; // Replace
+import problemSolarPanelImg from '../../assets/images/problem-solar-panel.png'; // Replace
 import pmpLogoImg from '../../assets/images/problem-pmp-logo.png'; // Replace
 
 const ProblemSection = () => {

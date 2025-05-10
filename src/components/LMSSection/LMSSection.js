@@ -17,7 +17,7 @@ import {
   Img,
   Slogan
 } from './LMSSectionElements';
-import lmsSolarImg from '../../assets/images/lms-solar.jpg'; // Replace with your image
+import lmsSolarImg from '../../assets/images/lms-solar.png'; // Replace with your image
 
 const features = [
   "Deliver technical education in the field's language",

@@ -13,7 +13,7 @@ import {
   Img,
   ActivationText
 } from './FinalMileElements';
-import finalMilePersonImg from '../../assets/images/final-mile-person.jpg'; // Replace
+import finalMilePersonImg from '../../assets/images/final-mile-person.png'; // Replace
 
 const FinalMileSection = () => {
   return (

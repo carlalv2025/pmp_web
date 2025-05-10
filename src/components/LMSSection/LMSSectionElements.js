@@ -134,10 +134,7 @@ export const ImgWrap = styled.div`
   height: auto;
   img {
     width: 100%;
-    border-radius: 15px; /* Rounded corners for the image */
-    /* The image in the design seems to have a circular/oval mask */
-    /* This can be achieved with clip-path if precise, or just border-radius */
-    clip-path: ellipse(45% 40% at 50% 50%); /* Approximate oval shape */
+
     object-fit: cover;
 
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
