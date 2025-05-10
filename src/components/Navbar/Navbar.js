@@ -3,16 +3,15 @@ import { Link as ScrollLink } from 'react-scroll';
 import {
   Nav,
   NavbarContainer,
-  NavLogo,
+  NavLogoLink,
+  NavLogoImg,
   MobileIcon,
   NavMenu,
   NavItem,
   NavLinkScroll,
-  // NavLogoImg, // If using an image for the logo
 } from './NavbarElements';
-import { FaBars, FaTimes } from 'react-icons/fa'; // npm install react-icons
-
-// import logoImage from '../../assets/images/logo.png'; // Import your logo
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logoImage from '../../assets/images/logo-pmp.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +19,14 @@ const Navbar = () => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  const closeMenu = () => setIsOpen(false); // Function to close menu
+
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
     } else {
       setScrollNav(false);
+      // setIsOpen(false); // Optional: close mobile menu when scrolling to top
     }
   };
 
@@ -36,6 +38,7 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
+    // ... (navItems array remains the same)
     { to: 'who-we-are', label: 'Who we are' },
     { to: 'the-problem', label: 'The problem' },
     { to: 'final-mile', label: 'The final Mile' },
@@ -49,24 +52,31 @@ const Navbar = () => {
   const scrollProps = {
     spy: true,
     smooth: true,
-    offset: -70, // Adjust based on your navbar height
+    offset: -80,
     duration: 500,
   };
 
   return (
-    <Nav scrollNav={scrollNav}>
+    // Pass isOpen to Nav for its own styling based on mobile menu state
+    <Nav scrollNav={scrollNav} isOpen={isOpen}>
       <NavbarContainer>
-        <NavLogo to="hero" {...scrollProps}>
-          {/* <NavLogoImg src={logoImage} alt="Power Media Partners" /> */}
-          Power Media Partners
-        </NavLogo>
-        <MobileIcon onClick={toggle}>
+        <NavLogoLink to="hero" {...scrollProps} onClick={closeMenu}> {/* Close menu on logo click */}
+          <NavLogoImg src={logoImage} alt="Power Media Partners" />
+        </NavLogoLink>
+        {/* Pass scrollNav and isOpen to MobileIcon for its conditional color styling */}
+        <MobileIcon onClick={toggle} scrollNav={scrollNav} isOpen={isOpen}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </MobileIcon>
         <NavMenu isOpen={isOpen}>
           {navItems.map(item => (
             <NavItem key={item.to}>
-              <NavLinkScroll to={item.to} {...scrollProps} onClick={isOpen ? toggle : null}>
+              {/* Pass scrollNav to NavLinkScroll for its conditional color styling */}
+              <NavLinkScroll
+                to={item.to}
+                {...scrollProps}
+                onClick={closeMenu} // Close menu on link click
+                scrollNav={scrollNav}
+              >
                 {item.label}
               </NavLinkScroll>
             </NavItem>

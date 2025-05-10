@@ -17,10 +17,10 @@ const HeroSection = () => {
           Your browser does not support the video tag.
         </VideoBg>
       </HeroBg>
-      <HeroContent>
+      {/* <HeroContent>
         <HeroH1>Presence.</HeroH1>
         <HeroP>Not Ads.</HeroP>
-      </HeroContent>
+      </HeroContent> */}
     </HeroContainer>
   );
 };

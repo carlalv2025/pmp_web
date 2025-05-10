@@ -13,7 +13,10 @@ import WhatWeDoSection from './components/WhatWeDoSection/WhatWeDoSection';
 import WhereWeWorkSection from './components/WhereWeWorkSection/WhereWeWorkSection';
 import WhoWeWorkWithSection from './components/WhoWeWorkWithSection/WhoWeWorkWithSection';
 import HowItWorksSection from './components/HowItWorksSection/HowItWorksSection';
-//import Footer from './components/Footer/Footer';
+import LMSSection from './components/LMSSection/LMSSection';
+import CallToActionSection from './components/CallToActionSection/CallToActionSection';
+import Footer from './components/Footer/Footer';
+
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
       <WhereWeWorkSection />
       <WhoWeWorkWithSection />
       <HowItWorksSection />
+         <LMSSection />
+      <CallToActionSection />
+      <Footer />
   
     </ThemeProvider>
   );
