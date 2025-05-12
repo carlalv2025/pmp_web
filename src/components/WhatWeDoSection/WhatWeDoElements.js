@@ -61,6 +61,7 @@ export const SubHeading = styled.p`
 export const ContentLayout = styled.div`
   display: flex;
   flex-direction: column;
+   margin-top: 100px;
   align-items: center;
   position: relative; /* Needed for absolute positioning of service items around main image */
 

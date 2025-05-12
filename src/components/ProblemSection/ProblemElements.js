@@ -17,7 +17,25 @@ export const ProblemContainer = styled.section`
     border-top-right-radius: 50px 50px;
   }
 `;
+export const StarIcon =  styled.img`
+  width: 3%;
+  height: 3%;
+  margin-right: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 
+
+`;
+
+export const TheProblemIcon =  styled.img`
+  width: 5%;
+  height: 5%;
+  margin-right: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+
+`;
 export const ProblemWrapper = styled.div`
   display: grid;
   z-index: 1;
@@ -92,10 +110,9 @@ export const TopLine = styled.h2`
   display: flex;
   align-items: center;
 
-  &::before { /* Orange accent line */
-    content: '♥'; /* Using heart as placeholder, replace with actual path/shape if possible */
-    color: ${({ theme }) => theme.colors.accentOrange};
-    font-size: 1.5rem; /* Adjust size */
+  img {
+    width: 24px; /* Ajusta según necesidad */
+    height: auto;
     margin-right: 10px;
   }
 `;
@@ -133,7 +150,9 @@ export const ProblemListItem = styled.li`
   font-size: 1.1rem;
   color: ${({ theme }) => theme.colors.textDark};
   font-weight: 500;
-
+ display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   span {
     display: block;
     font-size: 0.9rem;

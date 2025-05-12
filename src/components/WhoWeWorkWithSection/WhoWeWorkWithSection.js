@@ -10,15 +10,18 @@ import {
   ItemIcon,
   ItemText
 } from './WhoWeWorkWithElements';
-
+import Expanding from '../../assets/images/expanding.png'
+import Distributor from '../../assets/images/distributor.png'
+import Epc from '../../assets/images/epc.png'
+import Media from '../../assets/images/media.png'
 // Assume you have icons, e.g., from react-icons
 // import { FaMicrophone, FaShippingFast, FaStar, FaMapMarkerAlt } from 'react-icons/fa';
 
 const workItems = [
-  { icon: '🎙️', text: 'U.S. manufacturers expanding into LATAM' }, // Placeholder icons
-  { icon: '🚚', text: 'Distributors launching new brands or verticals' },
-  { icon: '✨', text: 'EPCs needing field-level brand content' },
-  { icon: '📍', text: 'Media-forward companies ready to own their voice operate' },
+  { icon: Expanding, text: 'U.S. manufacturers expanding into LATAM' }, // Placeholder icons
+  { icon: Distributor, text: 'Distributors launching new brands or verticals' },
+  { icon: Epc, text: 'EPCs needing field-level brand content' },
+  { icon: Media, text: 'Media-forward companies ready to own their voice operate' },
 ];
 
 
@@ -27,14 +30,14 @@ const WhoWeWorkWithSection = () => {
     <WhoWorkWithContainer id="who-we-work-with">
       <WhoWorkWithWrapper>
         <SectionTitle>
-          <PeopleIcon>👥</PeopleIcon> {/* Placeholder icon */}
+          <PeopleIcon></PeopleIcon> {/* Placeholder icon */}
           Who we work with
         </SectionTitle>
         <ContentBox>
           <WorkItemList>
             {workItems.map((item, index) => (
               <WorkItem key={index}>
-                <ItemIcon>{item.icon}</ItemIcon>
+               <ItemIcon src={item.icon} alt="" />
                 <ItemText>{item.text}</ItemText>
               </WorkItem>
             ))}

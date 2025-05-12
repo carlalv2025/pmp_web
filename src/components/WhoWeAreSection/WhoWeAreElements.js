@@ -50,13 +50,16 @@ export const TextWrapper = styled.div`
   padding-bottom: 60px;
 `;
 
-export const StarIcon = styled.span`
-  color: ${({ theme }) => theme.colors.accentOrange};
-  font-size: 2rem; /* Adjust size */
-  margin-right: 8px;
-  line-height: 1;
-  vertical-align: middle;
+export const StarIcon =  styled.img`
+  width: 10%;
+  height: 10%;
+  margin-right: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+
 `;
+
 
 export const TopLine = styled.p`
   color: ${({ theme }) => theme.colors.accentOrange};

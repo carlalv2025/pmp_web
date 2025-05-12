@@ -15,10 +15,14 @@ import {
   ImgWrap,
   Img,
   PmpLogo,
-  PmpLogoImg
+  PmpLogoImg,
+  StarIcon,
+  TheProblemIcon
 } from './ProblemElements';
 import problemSolarPanelImg from '../../assets/images/problem-solar-panel.png'; // Replace
-import pmpLogoImg from '../../assets/images/problem-pmp-logo.png'; // Replace
+import pmpLogoImg from '../../assets/images/pmp_logo_circle.png'; // Replace
+import checkListImg from '../../assets/images/checklist.png'
+import ProblemIcon from '../../assets/images/theProblemIcon.png';
 
 const ProblemSection = () => {
   return (
@@ -32,10 +36,14 @@ const ProblemSection = () => {
           </Column1>
           <Column2>
             <TextWrapper>
+             
               <PmpLogo>
                 <PmpLogoImg src={pmpLogoImg} alt="PMP Logo" />
               </PmpLogo>
-              <TopLine>The problem</TopLine>
+               <div style={{ display: 'flex', justifyContent: 'flex-start'}}>
+              <TheProblemIcon src={ProblemIcon}/>
+              <TopLine >The problem</TopLine>
+              </div>
               <Heading>
                 It's Easy to Sell To a Distributor. <br/>
                 But Who Helps Them Sell Out?
@@ -48,19 +56,19 @@ const ProblemSection = () => {
               </Paragraph>
               <ProblemList>
                 <ProblemListItem>
-                  <CheckIcon>✓</CheckIcon> Generic logos & PDFs
+                  <StarIcon src={checkListImg} alt={'Icon'}/> Generic logos & PDFs
                   <span>Custom reels, podcasts, & proof</span>
                 </ProblemListItem>
                 <ProblemListItem>
-                  <CheckIcon>✓</CheckIcon> Centralized delays
+                  <StarIcon src={checkListImg} alt={'Icon'}/> Centralized delays
                   <span>On-the-ground activation</span>
                 </ProblemListItem>
                 <ProblemListItem>
-                  <CheckIcon>✓</CheckIcon> No installer buy-in
+                  <StarIcon src={checkListImg} alt={'Icon'}/> No installer buy-in
                   <span>Installer-led brand belief</span>
                 </ProblemListItem>
                 <ProblemListItem>
-                  <CheckIcon>✓</CheckIcon> Passive marketing
+                  <StarIcon src={checkListImg} alt={'Icon'}/> Passive marketing
                   <span>Culture-connected media that moves</span>
                 </ProblemListItem>
               </ProblemList>

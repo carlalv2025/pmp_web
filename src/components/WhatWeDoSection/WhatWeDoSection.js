@@ -16,12 +16,12 @@ import {
 } from './WhatWeDoElements';
 
 // Import your images
-import mainWorkerImg from '../../assets/images/what-we-do-main.jpg';
+import mainWorkerImg from '../../assets/images/what-we-do-main.png';
 import salesKitsImg from '../../assets/images/what-we-do-sales-kits.jpg';
 import docuStyleImg from '../../assets/images/what-we-do-docu-style.jpg';
-import podcastImg from '../../assets/images/what-we-do-podcast.jpg';
-import testimonialImg from '../../assets/images/what-we-do-testimonial.jpg';
-import streetLevelImg from '../../assets/images/what-we-do-street-level.jpg'; // Assuming there is a 5th item in design or placeholder
+import podcastImg from '../../assets/images/what-we-do-podcast.png';
+import testimonialImg from '../../assets/images/what-we-do-main.png';
+import streetLevelImg from '../../assets/images/what-we-do-street-level.png'; // Assuming there is a 5th item in design or placeholder
 
 
 const services = [
@@ -43,9 +43,9 @@ const WhatWeDoSection = () => {
         </SectionHeader>
 
         <ContentLayout>
-          <MainImageWrapper>
+          {/* <MainImageWrapper>
             <MainImage src={mainWorkerImg} alt="Worker in hard hat" />
-          </MainImageWrapper>
+          </MainImageWrapper> */}
           <ServicesGrid>
             {services.map((service, index) => (
               <ServiceItem key={index} className={`service-item-${index}`}> {/* For specific positioning if needed */}

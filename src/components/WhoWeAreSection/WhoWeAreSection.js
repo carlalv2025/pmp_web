@@ -14,7 +14,7 @@ import {
   StarIcon // Assuming you'll have a star icon component or SVG
 } from './WhoWeAreElements';
 import whoWeAreImg from '../../assets/images/who-we-are.jpg'; // Replace with your image
-
+import Icon from '../../assets/images/whoweareicon.png';
 const WhoWeAreSection = () => {
   return (
     <WhoWeAreContainer id="who-we-are">
@@ -23,7 +23,7 @@ const WhoWeAreSection = () => {
           <Column1>
             <TextWrapper>
               <TopLine>
-                <StarIcon>✦</StarIcon> Who we are {/* Replace ✦ with actual icon */}
+                <StarIcon src={Icon} alt={'Icon'}/>{'  Who we are'}   {/* Replace ✦ with actual icon */}
               </TopLine>
               <Heading>
                 Power Media Partners (PMP) is your embedded field team – building brand credibility and market traction where it actually happens.

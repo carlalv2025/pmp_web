@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PeopleIcons from '../../assets/images/people.png'
 
 export const WhoWorkWithContainer = styled.section`
   background: ${({ theme }) => theme.colors.primaryDark}; /* Dark background */
@@ -20,9 +21,14 @@ export const WhoWorkWithWrapper = styled.div`
 `;
 
 export const PeopleIcon = styled.span`
-  font-size: 2.5rem; /* Adjust */
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: 15px;
-  color: ${({ theme }) => theme.colors.accentOrange}; /* Or use people icon color from design */
+   background-image: url(${PeopleIcons});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   vertical-align: middle;
 `;
 
@@ -36,14 +42,7 @@ export const SectionTitle = styled.h2`
   align-items: center;
   justify-content: center; /* Center icon and text */
 
-  /* Simulate the people icon group with text for now */
-  &::before {
-    content: '👥'; /* Replace with actual SVG or multiple icons if needed */
-    font-size: 3rem;
-    color: ${({ theme }) => theme.colors.accentOrange};
-    margin-right: 15px;
-    opacity: 0.7; /* Design shows them as outlines */
-  }
+
 
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
@@ -83,15 +82,16 @@ export const WorkItem = styled.li`
   }
 `;
 
-export const ItemIcon = styled.span`
-  font-size: 2rem; /* Adjust icon size */
-  color: ${({ theme }) => theme.colors.accentOrange};
+export const ItemIcon = styled.img`
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   margin-right: 20px;
-  min-width: 40px; /* Ensure space for icon */
-  text-align: center;
+  flex-shrink: 0;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
     margin-right: 15px;
   }
 `;
