@@ -13,7 +13,7 @@ import {
   Img,
   StarIcon // Assuming you'll have a star icon component or SVG
 } from './WhoWeAreElements';
-import whoWeAreImg from '../../assets/images/who-we-are.jpg'; // Replace with your image
+import whoWeAreImg from '../../assets/images/who-we-are.png'; // Replace with your image
 import Icon from '../../assets/images/whoweareicon.png';
 const WhoWeAreSection = () => {
   return (

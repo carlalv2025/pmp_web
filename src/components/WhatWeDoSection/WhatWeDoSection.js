@@ -17,8 +17,8 @@ import {
 
 // Import your images
 import mainWorkerImg from '../../assets/images/what-we-do-main.png';
-import salesKitsImg from '../../assets/images/what-we-do-sales-kits.jpg';
-import docuStyleImg from '../../assets/images/what-we-do-docu-style.jpg';
+import salesKitsImg from '../../assets/images/what-we-do-sales-kits.png';
+import docuStyleImg from '../../assets/images/what-we-do-docu-style.png';
 import podcastImg from '../../assets/images/what-we-do-podcast.png';
 import testimonialImg from '../../assets/images/what-we-do-main.png';
 import streetLevelImg from '../../assets/images/what-we-do-street-level.png'; // Assuming there is a 5th item in design or placeholder

@@ -14,7 +14,7 @@ import {
   StepsList,
   StepItem
 } from './HowItWorksElements';
-import howItWorksSolarImg from '../../assets/images/how-it-works-solar.jpg'; // Replace
+import howItWorksSolarImg from '../../assets/images/how-it-works-solar.png'; // Replace
 
 const steps = [
   "Field Intel & Storyboarding",

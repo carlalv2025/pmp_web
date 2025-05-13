@@ -15,6 +15,7 @@ import WhoWeWorkWithSection from './components/WhoWeWorkWithSection/WhoWeWorkWit
 import HowItWorksSection from './components/HowItWorksSection/HowItWorksSection';
 import LMSSection from './components/LMSSection/LMSSection';
 import CallToActionSection from './components/CallToActionSection/CallToActionSection';
+import TypeformEmbed from './components/TypeformEmbed/TypeformEmbed'
 import Footer from './components/Footer/Footer';
 
 
@@ -34,6 +35,7 @@ function App() {
       <HowItWorksSection />
          <LMSSection />
       <CallToActionSection />
+          <TypeformEmbed /> 
       <Footer />
   
     </ThemeProvider>
