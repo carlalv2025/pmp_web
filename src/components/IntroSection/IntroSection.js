@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
+// Import the image
+import presenceImage from '../../assets/images/slogan_black.png'; // Adjust path if your structure is different
+
 // Define styled components here or in IntroSectionElements.js
 const SectionWrapper = styled.section`
   padding: 80px 0;
@@ -100,7 +103,12 @@ const StickyCtaLink = styled.a`
       `}
   }
 `;
-
+const CenteredImage = styled.img`
+  display: block;
+  margin: 30px auto; /* Adds space above/below and centers */
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto; /* Maintains aspect ratio */
+`;
 
 const IntroSection = () => {
   const [isStickyButtonVisible, setIsStickyButtonVisible] = useState(false);
@@ -127,6 +135,9 @@ const IntroSection = () => {
   return (
     <SectionWrapper id="intro-section" ref={introSectionRef}>
       <Container>
+           {/* Add the centered image here */}
+        <CenteredImage src={presenceImage} alt="We build presence, not ads." />
+
         <Heading>We help solar distributors and manufacturers win new markets through field-first content, installer trust, and community-driven storytelling.</Heading>
         <TextBlock>
           We don't just film installs - we build presence that moves product.
